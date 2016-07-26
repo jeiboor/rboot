@@ -42,7 +42,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'. '..v..'  '..status..'\n'
     end
   end
-  local text = text..'\nBot Version > 6.7'
+  local text = text..'\nDone ;-)'
   return text
 end
 
@@ -67,7 +67,7 @@ local function list_plugins(only_enabled)
       text = text..v..'  '..status..'\n'
     end
   end
-  local text = text..'\nBot Version > 6.7'
+  local text = text..'\nDone ;-)'
   return text
 end
 
@@ -189,7 +189,7 @@ local function run(msg, matches)
   end
 
   -- Reload all the plugins!
-  if matches[1] == '?' and is_sudo(msg) then --after changed to moderator mode, set only sudo
+  if matches[1] == '!' and is_sudo(msg) then --after changed to moderator mode, set only sudo
     return reload_plugins(true)
   end
 end
@@ -205,7 +205,7 @@ return {
           "plug : list all plugins.",
           "plug + [plugin] : enable plugin.",
           "plug - [plugin] : disable plugin.",
-          "plug ? : reloads all plugins." },
+          "plug ! : reloads all plugins." },
           },
   patterns = {
     "^[!/#]plugins$",

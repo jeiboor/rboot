@@ -55,7 +55,7 @@ end
   -- if msg.out then
    -- print('\27[36mNot valid: msg from us\27[39m')
    -- return false
-  -- end
+   end
 
   -- Before bot was started
   if msg.date < os.time() - 5 then
@@ -94,6 +94,7 @@ end
   end
 
   return true
+
 end
 
 --

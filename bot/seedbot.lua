@@ -51,7 +51,7 @@ function on_binlog_replay_end()
 end
 
    function msg_valid(msg)
-   Don't process outgoing messages
+ -- Don't process outgoing messages
    if msg.out then
     print('\27[36mNot valid: msg from us\27[39m')
     return true
